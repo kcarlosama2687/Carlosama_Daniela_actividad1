@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Rescate - Sistema de Rescate Animal</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Control de Rescate y Adopción Animal</h1>
+        <p>Plataforma para el registro y seguimiento de rescates.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html" aria-current="page">Reportar rescate</a></li>
+            <li><a href="rescates.html">Consultar rescates</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Formulario de Registro de Rescate</h2>
+
+            <article>
+                <h3>Registrar un nuevo animal rescatado</h3>
+
+                <p>
+                    Complete la siguiente información para reportar
+                    un animal que se encuentre en situación de riesgo.
+                </p>
+
+                <form action="#" method="get">
+
+                    <fieldset>
+                        <legend>Datos del reportante</legend>
+
+                        <p>
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre"
+                                   name="nombre" required minlength="3">
+                        </p>
+
+                        <p>
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo"
+                                   name="correo" required>
+                        </p>
+
+                        <p>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono"
+                                   name="telefono"
+                                   pattern="[0-9]{10}" maxlength="10"
+                                   title="Ingrese 10 dígitos numéricos"
+                                   required>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Datos del animal rescatado</legend>
+
+                        <p>
+                            <label for="titulo">
+                                Título del caso o nombre provisional:
+                            </label>
+                            <input type="text" id="titulo"
+                                   name="titulo" minlength="3" required>
+                        </p>
+
+                        <p>
+                            <label for="especie">Especie del animal:</label>
+
+                            <select id="especie" name="especie" required>
+                                <option value="">Seleccione una especie</option>
+                                <option value="perro">Perro</option>
+                                <option value="gato">Gato</option>
+                                <option value="fauna">Fauna silvestre</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="ubicacion">Ubicación del rescate:</label>
+                            <input type="text" id="ubicacion"
+                                   name="ubicacion" minlength="5" required>
+                        </p>
+
+                        <p>
+                            <label for="fecha">Fecha del reporte:</label>
+                            <input type="date" id="fecha"
+                                   name="fecha" required>
+                        </p>
+
+                        <fieldset>
+                            <legend>Nivel de urgencia médica</legend>
+
+                            <p>
+                                <input type="radio" id="alta"
+                                       name="urgencia" value="alta" required>
+                                <label for="alta">Alta</label>
+                            </p>
+
+                            <p>
+                                <input type="radio" id="media"
+                                       name="urgencia" value="media">
+                                <label for="media">Media</label>
+                            </p>
+
+                            <p>
+                                <input type="radio" id="baja"
+                                       name="urgencia" value="baja">
+                                <label for="baja">Baja</label>
+                            </p>
+                        </fieldset>
+
+                        <p>
+                            <label for="descripcion">
+                                Descripción detallada del estado del animal:
+                            </label>
+                        </p>
+
+                        <p>
+                            <textarea id="descripcion"
+                                      name="descripcion"
+                                      rows="6" cols="45"
+                                      minlength="10" required
+                                      placeholder="Describa cómo encontró al animal, su estado físico y las condiciones del rescate."></textarea>
+                        </p>
+
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Enviar reporte</button>
+                        <button type="reset">Limpiar formulario</button>
+                    </p>
+
+                </form>
+            </article>
+        </section>
+
+        <section>
+            <h2>Información importante</h2>
+
+            <article>
+                <h3>Seguimiento de los rescates</h3>
+                <p>
+                    El sistema contempla cuatro estados para
+                    el seguimiento de los animales:
+                    Rescatado, En tratamiento, En adopción y Adoptado.
+                </p>
+
+                <p>
+                    <a href="rescates.html">
+                        Consultar listado de rescates
+                    </a>
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto académico - Universidad Técnica de Manabí</p>
+        <p>Desarrollo de Sistemas Informáticos</p>
+        <p>Sistema de Control de Rescate y Adopción Animal</p>
+    </footer>
+
+</body>
+</html>
